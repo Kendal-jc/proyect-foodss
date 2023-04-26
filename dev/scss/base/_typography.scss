@@ -1,0 +1,11 @@
+@use '../abstracts/variables';
+
+
+//set fontzise for titles and section
+@mixin set-font($family,$fweight,$fsize,$fcolor:variables.$clr-btn){
+    font-family: $family;
+    font-weight:$fweight ;
+    font-size:$fsize ;
+    color:$fcolor;
+}
+

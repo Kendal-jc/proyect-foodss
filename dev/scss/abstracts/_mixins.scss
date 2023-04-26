@@ -1,0 +1,7 @@
+
+//set fonts for titles and sections
+@mixin set-font($fweight, $fsize, $fcolor){
+    font-weight: $fweight;
+    font-size: $fsize ;   
+    color: $fcolor;
+}

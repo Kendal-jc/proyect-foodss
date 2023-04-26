@@ -1,0 +1,46 @@
+@use '../abstracts/variables';
+@use '../base/typography';
+@use '../vendor/media-queries';
+
+@mixin btn($b){
+    position: relative;
+    display: table-cell;
+    place-items: center;
+    padding:4px 29px; 
+    border-radius: 10px; 
+    border: none;
+    text-decoration: none;
+    font-family: variables.$fp;
+    font-size: variables.$f-card-btn;
+    font-weight:variables.$fw-bold ;
+    background-color:$b;
+
+    @include media-queries.respond-to(media-queries.$phone){
+      display: block;
+      margin: 1rem auto;
+      width: 80%;
+      text-align: center;
+  }
+}
+
+
+@mixin btn-like($b){
+  position: relative;
+  display: table-cell;
+  place-items: center;
+  padding:4px 29px; 
+  border-radius: 10px; 
+  border: none;
+  text-decoration: none;
+  font-family: variables.$ff;
+  font-size: variables.$f-card-like;
+  font-weight:variables.$fw-regular;
+  background-color:variables.$clr-orange;
+  color: $b;
+  @include media-queries.respond-to(media-queries.$phone){
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+}
+}

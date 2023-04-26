@@ -1,0 +1,24 @@
+// abstracts
+@use './abstracts/variables';
+
+//base
+@use './base/reset';
+@use './base/typography';
+
+
+// Ventor
+@use './components/components';
+
+// pages
+@use './pages/home.scss';
+
+// Ventor
+@use './vendor/media-queries';
+
+// utils
+@use './utils/utils';
+
+// layout
+@use './layout/layout.scss';
+@use './layout/header.scss';
+

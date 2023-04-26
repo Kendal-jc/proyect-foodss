@@ -1,0 +1,34 @@
+
+@use './abstracts/variables';
+@use './base/typography';
+
+@use './components/components';
+@use '../layout/layout';
+@use '../vendor/media-queries';
+
+
+h1{
+    @include typography.set-font(variables.$ft, variables.$fw-bold, variables.$f-t,variables.$clr-white);
+    text-align: center;
+  
+}
+
+h2{
+    @include typography.set-font(variables.$fp, variables.$fw-bold, variables.$f-subtible,variables.$clr-dark);
+    text-align: center;
+  
+}
+
+h3{
+    @include typography.set-font(variables.$fp, variables.$fw-bold, variables.$f-top,variables.$clr-dark);
+    text-align: center;
+  
+}
+
+.btn-like{
+    
+  
+        @include components.btn-like(variables.$clr-dark);
+        list-style-type: none;
+}
+

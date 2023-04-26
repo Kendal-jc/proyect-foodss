@@ -1,0 +1,21 @@
+@use '../vendor/media-queries';
+
+
+.container{
+    display: grid;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block;
+        justify-content:center;
+    }
+}
+.col{
+    flex:1 0 0%;
+}
+
+

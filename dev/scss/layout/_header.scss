@@ -1,0 +1,47 @@
+@use '../abstracts/variables';
+@use '../base/typography';
+@use '../vendor/media-queries';
+.testimonial1 {
+    min-height: 100vh;
+    margin: auto;
+    background-image: url(../imgs/foodss.jpg);
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-size: cover;
+    height: 500px;
+}
+.principal {
+    width: 100vw;
+    height: 100vh;
+}
+
+.details-limit {
+    width: 90vw;
+    height: 100vh;
+}
+
+.logo-header {
+    width: 60px;
+}
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 200px;
+}
+
+.header {
+    width: 100vw;
+    height: 70px;
+    background: variables.$clr-orange;
+    display: flex;
+    justify-content: center;
+}
+
+.header-limit {
+    width: 90vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}

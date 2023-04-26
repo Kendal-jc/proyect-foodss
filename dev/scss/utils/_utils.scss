@@ -1,0 +1,5 @@
+@use './abstracts/variables';
+
+.tittle-clr{
+    color: variables.$clr-orange;
+}

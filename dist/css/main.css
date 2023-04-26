@@ -1,0 +1,142 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media only screen and (max-width: 480px) {
+  .row {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+}
+
+h1 {
+  font-family: "Rubik Wet Paint", cursive;
+  font-weight: 700;
+  font-size: 5.625rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+
+h2 {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 13%);
+  text-align: center;
+}
+
+h3 {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 13%);
+  text-align: center;
+}
+
+.btn-like {
+  position: relative;
+  display: table-cell;
+  place-items: center;
+  padding: 4px 29px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background-color: hsl(43deg, 97%, 51%);
+  color: hsl(0deg, 0%, 13%);
+  list-style-type: none;
+}
+@media only screen and (max-width: 480px) {
+  .btn-like {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.tittle-clr {
+  color: hsl(43deg, 97%, 51%);
+}
+
+.testimonial1 {
+  min-height: 100vh;
+  margin: auto;
+  background-image: url(../imgs/foodss.jpg);
+  background-repeat: no-repeat;
+  background-image: cover;
+  background-size: cover;
+  height: 500px;
+}
+
+.principal {
+  width: 100vw;
+  height: 100vh;
+}
+
+.details-limit {
+  width: 90vw;
+  height: 100vh;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  max-width: 200px;
+}
+
+.header {
+  width: 100vw;
+  height: 70px;
+  background: hsl(43deg, 97%, 51%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-limit {
+  width: 90vw;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
