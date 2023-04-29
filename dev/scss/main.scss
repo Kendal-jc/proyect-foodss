@@ -19,6 +19,8 @@
 @use './utils/utils';
 
 // layout
-@use './layout/layout.scss';
-@use './layout/header.scss';
+@use './layout/layout';
+@use './layout/header';
+@use './layout/footer';
+
 

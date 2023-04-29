@@ -4,25 +4,25 @@
 
 @mixin btn($b){
     position: relative;
-    display: table-cell;
     place-items: center;
-    padding:4px 29px; 
-    border-radius: 10px; 
+    text-decoration: none;
+    padding:4px  14px; 
+    border-radius: 6px;
     border: none;
     text-decoration: none;
     font-family: variables.$fp;
     font-size: variables.$f-card-btn;
     font-weight:variables.$fw-bold ;
     background-color:$b;
-
-    @include media-queries.respond-to(media-queries.$phone){
-      display: block;
-      margin: 1rem auto;
-      width: 80%;
-      text-align: center;
-  }
+    color: variables.$clr-white;
+    margin: 3rem !important;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 1rem;
 }
-
 
 @mixin btn-like($b){
   position: relative;
@@ -31,7 +31,10 @@
   padding:4px 29px; 
   border-radius: 10px; 
   border: none;
+  margin-left: 6rem;
+  text-align: center!important;
   text-decoration: none;
+  display: inline-block;
   font-family: variables.$ff;
   font-size: variables.$f-card-like;
   font-weight:variables.$fw-regular;

@@ -2,5 +2,8 @@
 
 body{
     font-family: variables.$ff;
-    color: black;
+    background: variables.$clr-body;
+    margin: 0;
+    padding: 0;
+    color: variables.$clr-btn;
 }

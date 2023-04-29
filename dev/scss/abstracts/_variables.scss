@@ -11,9 +11,12 @@ $f-card-like:0.875rem;
 $fp: 'Arvo', serif;
 
 //font-size
+$f-details: 4rem;
 $f-subtible: 3rem;
+$f-name-details: 1.25rem;
 $f-top: 2.5rem;
-$f-card-title:0.938rem;
+$f-d: 1rem;
+$f-card-title:1.4rem;
 $f-card-btn:1.25rem;
  //font-family
 
@@ -24,7 +27,7 @@ $ft: 'Rubik Wet Paint', cursive;
 $f-t: 5.625rem;
  //font-family
 
- $fw-regular: 400;
+$fw-regular: 400;
 $fw-semibold: 600;
 $fw-bold-italic: 700;
 $fw-bold: 700;
@@ -35,3 +38,5 @@ $clr-dark: hsl(0, 0%, 13%);
 $clr-white: hsl(0, 0%, 100%);
 $clr-orange: hsl(43, 97, 51%);
 $clr-btn: hsl(0, 0%, 26%);
+$clr-body: hsl(0, 0%, 96%);
+$clr-submit: hsl(166, 30%, 52%);

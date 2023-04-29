@@ -1,5 +1,9 @@
-@use '../abstracts/variables';
-@use '../base/typography';
+@use './abstracts/mixins';
+@use './abstracts/variables';
+@use './base/typography';
+
+@use './components/components';
+@use '../layout/layout';
 @use '../vendor/media-queries';
 .testimonial1 {
     min-height: 100vh;
@@ -10,38 +14,39 @@
     background-size: cover;
     height: 500px;
 }
-.principal {
-    width: 100vw;
-    height: 100vh;
-}
 
-.details-limit {
-    width: 90vw;
-    height: 100vh;
+.limit {
+  margin-left: 4rem;
 }
 
 .logo-header {
     width: 60px;
-}
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 200px;
+    margin-left: 3rem;
 }
 
-.header {
-    width: 100vw;
-    height: 70px;
-    background: variables.$clr-orange;
-    display: flex;
-    justify-content: center;
+  .mr{
+    margin-right: 3rem;
+
+  }
+
+.clr-background-header {
+  width: 100vw;
+  height: 70px;
+    color: variables.$clr-orange;
+  }
+
+.m-btn{
+    margin: 3rem;
+    
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        margin: 0;
+        display: block;
+        margin-left: -12rem;
+      }
 }
 
-.header-limit {
-    width: 90vw;
-    height: 70px;
-    display: flex;
-    align-items: center;
+.btn-c{
+  margin-left: 12.5rem;
+  
 }

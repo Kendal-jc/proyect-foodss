@@ -1,0 +1,60 @@
+@use '../abstracts/variables';
+@use '../base/typography';
+@use '../vendor/media-queries';
+.clr-footer {
+    height: 300px;
+    width: auto;
+    margin-top: 20rem;
+    padding-left: 3rem;
+    position: relative;
+    background:variables.$clr-btn;
+    z-index: 0;
+    justify-content: space-between;
+    position: relative;
+   
+}
+
+
+.img-center{
+    margin-left: 38rem;
+    margin-top: 2rem;
+    
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        margin-left: 4rem;
+        margin-top: 6rem;
+      }
+}
+
+.img-center-logo{
+    margin-left: 44.5rem;
+    margin-top: -3rem;
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        margin-left: 10.1rem;
+        margin-top: 2rem;
+      }
+}
+
+.img-25 {
+    display: block;
+    width: 20%;
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        width: 70%;
+      }
+}
+
+.img-5{
+    display: block;
+    width: 5%;
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        width: 15%;
+      }
+}
+
+.text-f{
+    text-align: center;
+    margin-top: 1rem;
+}

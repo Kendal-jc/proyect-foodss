@@ -1,0 +1,13 @@
+.container-footer {
+  height: 300px;
+  width: auto;
+  margin-top: 20rem;
+  padding-left: 3rem;
+  position: relative;
+  background: hsl(43deg, 97%, 51%);
+  z-index: 0;
+}
+
+.clr-footer {
+  background: hsl(43deg, 97%, 51%);
+}

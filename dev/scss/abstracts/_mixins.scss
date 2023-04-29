@@ -5,3 +5,26 @@
     font-size: $fsize ;   
     color: $fcolor;
 }
+
+@mixin imgg($b){
+    width: $b;
+    image-rendering: auto;
+    background-size: cover;
+    position: relative;
+    left: 25%;
+    display: flex;
+    flex-flow: row;
+    height: 365px;
+  }
+
+  @mixin text-img($fweight, $fsize, $fcolor,$ff){
+    font-weight: $fweight;
+    font-size: $fsize ;   
+    color: $fcolor;
+    font-family: $ff;
+    position: relative;
+    left: 25%;
+    display: flex;
+    flex-flow: row;
+}
+
