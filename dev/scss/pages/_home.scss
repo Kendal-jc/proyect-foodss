@@ -68,7 +68,10 @@ h3{
     @include typography.set-font(variables.$ff, variables.$fw-regular, variables.$f-card-time,variables.$clr-dark);
     
 }
+.text-cinft{
+    @include typography.set-font(variables.$ff, variables.$fw-medium, variables.$f-inf,variables.$clr-dark);
 
+}
 .btn-list{
     @include components.btn(variables.$clr-btn);
 
@@ -89,9 +92,20 @@ h3{
 }
 
 .imgs{
-    @include mixins.imgg(50%);
+    @include mixins.imgg(70%);
+
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        width: 60%;
+        left: 18%;
+        height: 254px;
+
+      }
+
 }
 
+
+//detalle
 .text-detalils{
     @include typography.set-font(variables.$fp, variables.$fw-bold, variables.$f-subtible,variables.$clr-btn);
     margin-top: 5rem;
@@ -109,6 +123,86 @@ h3{
     @include mixins.text-img(variables.$fp, variables.$fw-bold, variables.$f-name-details,variables.$clr-btn);
 }
 
+.tittle-clr{
+    color: variables.$clr-orange;
+}
+.mrr{
+    @include mixins.mr-all(5rem);
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        margin-right: 0;
+
+      }
+
+}
+.inf{
+    position: relative;
+    top: 19%;
+    left: 3%;
+}
+
+.inf-left {
+    top: 1%;
+    left: 8%;
+    position: relative;
+    text-decoration: none;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+
+.margin-tp {
+    margin-top: 5rem;
+}
+
+.margin-tp-title {
+    margin-top: 13rem;
+}
+.img-iconss{
+    width: 7%;
+    display: inline-block;
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin: -3rem;
+      }
+}
+
+.m-left{
+    margin-left:-20rem !important;
+}
+
+.text-none{
+    text-decoration: auto!important;
+}
+
+
+.m-r-img{
+    margin: -19rem;
+    @include media-queries.respond-to(media-queries.$phone){
+     
+       margin: 0rem;
+      }
+}
+
+.me-d{
+   width: 70%;
+}
+
+.center-icns{
+    margin: -1rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    justify-content: center;
+
+    @include media-queries.respond-to(media-queries.$phone){
+     
+      margin-left: 0;
+
+      }
+}
+//detalle
 
 
 

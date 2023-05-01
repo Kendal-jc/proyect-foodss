@@ -11,10 +11,10 @@
     image-rendering: auto;
     background-size: cover;
     position: relative;
-    left: 25%;
+    left: 16.5%;
     display: flex;
     flex-flow: row;
-    height: 365px;
+    height: 396px;
   }
 
   @mixin text-img($fweight, $fsize, $fcolor,$ff){
@@ -26,5 +26,10 @@
     left: 25%;
     display: flex;
     flex-flow: row;
+}
+
+
+@mixin mr-all($n){
+  margin-right:$n;
 }
 

@@ -46,7 +46,7 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 limit mt-3">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 limit mt-0">
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Iniciar Sección</a>
                       </li>
@@ -54,10 +54,13 @@
                         <a class="nav-link" href="#">Registrarme</a>
                       </li>
                     </ul>
-                    <form class="d-flex mr" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                      <div class="input-container d-flex mr">
+                        <input class="me-2" required="" placeholder="search" type="email">
+                        <button class="invite-btn" type="button">
+                            Search
+                        </button>
+                       
+                      </div>
                   </div>
                 </div>
               </nav>
@@ -109,43 +112,48 @@
     <section class="row">
         <section class="row">
             
-               <div class='col-sm mt-4 d-flex justify-content-center'>
-                        <div class='card bg-body rounded border-0'>
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                            <div class='card-body'>
-                                <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate top-nav-link' href='./detalle.php'>Hamburguesa</p>
-                                <button class='btn-like mt-3'>
-                                    Like
-                                </button>
-                                <div class='row d-flex justify-space-around mt-3'>
-                                    <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                    <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                                </div>
-                            </div>
+            <div class='col-sm mt-4 d-flex justify-content-center'>
+                <div class='card bg-body rounded border-0'>
+                    <a href="./detalle.html">
+                        <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+                   </a>
+                    <div class='card-body'>
+                        <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                        <div>
+                            <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
                         </div>
-                    </div> 
-
+                        <button class='btn-like mt-3'>
+                            Like
+                        </button>
+                        <div class='row d-flex justify-space-around mt-3'>
+                            <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                            <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
                   
-                    <div class='col-sm mt-4 d-flex justify-content-center'>
-                        <div class='card bg-body rounded border-0'>
-                            <a href="./detalle.html">
-                                 <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                            </a>
-                            <div class='card-body'>
-                                <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>
-                                    Hamburguesa
-                                </p>
-                                <button class='btn-like mt-3'>
-                                    Like
-                                </button>
-                                <div class='row d-flex justify-space-around mt-3'>
-                                    <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                    <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                                </div>
-                            </div>
+              
+            <div class='col-sm mt-4 d-flex justify-content-center'>
+                <div class='card bg-body rounded border-0'>
+                    <a href="./detalle.html">
+                        <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+                   </a>
+                    <div class='card-body'>
+                        <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                        <div>
+                            <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
                         </div>
-                    </div> 
-
+                        <button class='btn-like mt-3'>
+                            Like
+                        </button>
+                        <div class='row d-flex justify-space-around mt-3'>
+                            <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                            <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
 
                     <div class='col-sm mt-4 d-flex justify-content-center'>
                         <div class='card bg-body rounded border-0'>
@@ -153,7 +161,10 @@
                                 <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
                            </a>
                             <div class='card-body'>
-                                <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
+                                <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                                <div>
+                                    <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                                </div>
                                 <button class='btn-like mt-3'>
                                     Like
                                 </button>
@@ -166,23 +177,27 @@
                     </div> 
 
                    
-               <div class='col-sm mt-4 d-flex justify-content-center'>
-                <div class='card bg-body rounded border-0'>
-                    <a href="./detalle.html">
-                        <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                   </a>
-                    <div class='card-body'>
-                        <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                        <button class='btn-like mt-3'>
-                            Like
-                        </button>
-                        <div class='row d-flex justify-space-around mt-3'>
-                            <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                            <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+             
+                    <div class='col-sm mt-4 d-flex justify-content-center'>
+                        <div class='card bg-body rounded border-0'>
+                            <a href="./detalle.html">
+                                <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+                           </a>
+                            <div class='card-body'>
+                                <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                                <div>
+                                    <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                                </div>
+                                <button class='btn-like mt-3'>
+                                    Like
+                                </button>
+                                <div class='row d-flex justify-space-around mt-3'>
+                                    <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                                    <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div> 
+                    </div> 
 
         </section>
 </section>
@@ -190,70 +205,17 @@
 <section class="row">
     <section class="row">
         
-           <div class='col-sm mt-4 d-flex justify-content-center'>
-                    <div class='card bg-body rounded border-0'>
-                        <a href="./detalle.html">
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                       </a>
-                        <div class='card-body'>
-                            <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                            <button class='btn-like mt-3'>
-                                Like
-                            </button>
-                            <div class='row d-flex justify-space-around mt-3'>
-                                <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-              
-                <div class='col-sm mt-4 d-flex justify-content-center'>
-                    <div class='card bg-body rounded border-0'>
-                        <a href="./detalle.html">
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                       </a>
-                        <div class='card-body'>
-                            <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                            <button class='btn-like mt-3'>
-                                Like
-                            </button>
-                            <div class='row d-flex justify-space-around mt-3'>
-                                <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-
-                <div class='col-sm mt-4 d-flex justify-content-center'>
-                    <div class='card bg-body rounded border-0'>
-                        <a href="./detalle.html">
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                       </a>
-                        <div class='card-body'>
-                            <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                             <button class='btn-like mt-3'>
-                                Like
-                            </button>
-                            <div class='row d-flex justify-space-around mt-3'>
-                                <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-               
-           <div class='col-sm mt-4 d-flex justify-content-center'>
+      
+        <div class='col-sm mt-4 d-flex justify-content-center'>
             <div class='card bg-body rounded border-0'>
                 <a href="./detalle.html">
                     <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
                </a>
                 <div class='card-body'>
-                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                    </div>
                     <button class='btn-like mt-3'>
                         Like
                     </button>
@@ -265,48 +227,119 @@
             </div>
         </div> 
 
+              
+      
+        <div class='col-sm mt-4 d-flex justify-content-center'>
+            <div class='card bg-body rounded border-0'>
+                <a href="./detalle.html">
+                    <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+               </a>
+                <div class='card-body'>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                    </div>
+                    <button class='btn-like mt-3'>
+                        Like
+                    </button>
+                    <div class='row d-flex justify-space-around mt-3'>
+                        <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                        <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+
+         
+        <div class='col-sm mt-4 d-flex justify-content-center'>
+            <div class='card bg-body rounded border-0'>
+                <a href="./detalle.html">
+                    <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+               </a>
+                <div class='card-body'>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                    </div>
+                    <button class='btn-like mt-3'>
+                        Like
+                    </button>
+                    <div class='row d-flex justify-space-around mt-3'>
+                        <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                        <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class='col-sm mt-4 d-flex justify-content-center'>
+            <div class='card bg-body rounded border-0'>
+                <a href="./detalle.html">
+                    <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+               </a>
+                <div class='card-body'>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                    </div>
+                    <button class='btn-like mt-3'>
+                        Like
+                    </button>
+                    <div class='row d-flex justify-space-around mt-3'>
+                        <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                        <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </section>
 </section>
 
 <section class="row">
     <section class="row justify-content-center">
         
-           <div class='col-sm-3 mt-4 d-flex justify-content-center'>
-                    <div class='card bg-body rounded border-0''>
-                        <a href="./detalle.html">
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                       </a>
-                        <div class='card-body'>
-                            <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                            <button class='btn-like mt-3'>
-                                Like
-                            </button>
-                            <div class='row d-flex justify-space-around mt-3'>
-                                <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                            </div>
-                        </div>
+           
+        <div class='col-sm-3 mt-4 d-flex justify-content-center'>
+            <div class='card bg-body rounded border-0'>
+                <a href="./detalle.html">
+                    <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+               </a>
+                <div class='card-body'>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
                     </div>
-                </div> 
-
-              
-                <div class='col-sm-3 mt-4 d-flex justify-content-center'>
-                    <div class='card bg-body rounded border-0''>
-                        <a href="./detalle.html">
-                            <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
-                       </a>
-                        <div class='card-body'>
-                            <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate' href='./detalle.php'>Hamburguesa</p>
-                            <button class='btn-like mt-3'>
-                                Like
-                            </button>
-                            <div class='row d-flex justify-space-around mt-3'>
-                                <div class='col-7 inf card-inf text-truncate'>25 min</div>
-                                <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
-                            </div>
-                        </div>
+                    <button class='btn-like mt-3'>
+                        Like
+                    </button>
+                    <div class='row d-flex justify-space-around mt-3'>
+                        <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                        <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
                     </div>
-                </div> 
+                </div>
+            </div>
+        </div>
+        <div class='col-sm-3 mt-4 d-flex justify-content-center'>
+            <div class='card bg-body rounded border-0'>
+                <a href="./detalle.html">
+                    <img src='./imgs/recipe-1.jpg' class='card-img-top rounded' alt="image">
+               </a>
+                <div class='card-body'>
+                    <p class='card-title pointer text-decoration-none text-center d-block name-card text-truncate'>Hamburguesa</p>
+                    <div>
+                        <p class="text-cinft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.</p>
+                    </div>
+                    <button class='btn-like mt-3'>
+                        Like
+                    </button>
+                    <div class='row d-flex justify-space-around mt-3'>
+                        <div class='col-7 inf card-inf text-truncate'>25 min</div>
+                        <div class='col-5  inf-left card-inf d-flex justify-content-end pe-5'>Facil</div>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </section>
 </section>
 
