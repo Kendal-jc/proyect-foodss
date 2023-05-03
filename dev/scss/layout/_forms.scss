@@ -136,16 +136,20 @@
   color: variables.$clr-white;
   margin-top: 54px;
   margin-bottom: 74px;
+ 
 
   @include media-queries.respond-to(media-queries.$tablet-landscape) {
-    margin-top: 43px;
-    margin-bottom: 69px;
-    font-size: variables.$f-form-t-r;
+    margin: -2rem;
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+    margin-left: -1rem;
+    margin-top: 4rem;
+
   }
 
   @include media-queries.respond-to(media-queries.$phone) {
     margin-bottom: 54px;
-    margin-left: 1rem;
+    margin-left: 0rem;
     font-size: 2.2rem;
   }
 }
@@ -172,7 +176,7 @@
   width: 50%;
   display: inline-block;
   position: relative;
-  margin-left: 5rem;
+  margin-left: 4rem;
   margin-top: 13rem;
   @include media-queries.respond-to(media-queries.$phone){
      

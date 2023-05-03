@@ -734,15 +734,17 @@ h3 {
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .signup-classic h2 {
-    margin-top: 43px;
-    margin-bottom: 69px;
+    margin: -2rem;
+    margin-bottom: 5rem;
     font-size: 2.4rem;
+    margin-left: -1rem;
+    margin-top: 4rem;
   }
 }
 @media only screen and (max-width: 640px) {
   .signup-classic h2 {
     margin-bottom: 54px;
-    margin-left: 1rem;
+    margin-left: 0rem;
     font-size: 2.2rem;
   }
 }
@@ -769,7 +771,7 @@ h3 {
   width: 50%;
   display: inline-block;
   position: relative;
-  margin-left: 5rem;
+  margin-left: 4rem;
   margin-top: 13rem;
 }
 @media only screen and (max-width: 640px) {
