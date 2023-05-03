@@ -1,0 +1,25 @@
+@use "./abstracts/variables";
+@use "../vendor/media-queries";
+
+
+.img-p{
+    width: 33%;
+    height: 78%;
+    margin-left: 6rem;
+
+    
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        margin-top: 2rem;
+        align-items: center;
+      }
+  
+      @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 46%;
+        height: 27%;
+        margin-left: 6rem;
+        margin-top: 2rem;
+        }
+  }
+
+

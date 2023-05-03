@@ -215,5 +215,56 @@ h3{
 }
 //forms
 
+//formsPerfil
+.text-f-pp{
+    @include typography.set-font(variables.$fp, variables.$fw-bold-italic, variables.$f-form-t,variables.$clr-dark);
+    margin-right: 76rem;
+
+       @include media-queries.respond-to(media-queries.$phone){
+     
+      margin-right: 0rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+       
+        margin-right: 0rem;
+      }
+}
+
+.text-f-name{
+    @include typography.set-font(variables.$fp, variables.$fw-bold-italic, variables.$f-form-n,variables.$clr-dark);
+    margin-left: -6rem;
+
+       @include media-queries.respond-to(media-queries.$phone){
+     
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+       
+        margin-top: 4rem;
+        align-items: center;
+      }
+}
+
+.text-frm{
+    @include typography.set-font(variables.$fp, variables.$fw-regular, variables.$f-form-tt,variables.$clr-dark);
+
+       @include media-queries.respond-to(media-queries.$phone){
+     
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+       
+        margin-top: 4rem;
+        align-items: center;
+      }
+}
+//formsPerfil
+
+
 
 
