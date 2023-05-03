@@ -31,11 +31,13 @@ h2{
 
     @include media-queries.respond-to(media-queries.$phone){
      
-       font-size: 2rem;
-       margin-left: -5rem;
+        font-size: 1.8rem;
+        margin-left: -6rem;
       }
   
-  
+      @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin-right: 6rem;
+      }
 }
 
 h3{
@@ -207,6 +209,7 @@ h3{
 //forms
 .text-fr-f{
     @include typography.set-font(variables.$fp, variables.$fw-bold-italic, variables.$f-d,variables.$clr-white);
+    
 
 }
 //forms

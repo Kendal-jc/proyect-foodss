@@ -135,7 +135,7 @@
   font-weight: variables.$fw-bold-italic;
   color: variables.$clr-white;
   margin-top: 54px;
-  margin-bottom: 112px;
+  margin-bottom: 74px;
 
   @include media-queries.respond-to(media-queries.$tablet-landscape) {
     margin-top: 43px;

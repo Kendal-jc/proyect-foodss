@@ -12,10 +12,21 @@
     @include media-queries.respond-to(media-queries.$phone){
         display: block;
         justify-content:center;
+        margin: 0rem;
     }
 }
-.col{
-    flex:1 0 0%;
+.col-3{
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+      width: 57%;
+      flex: 1 0 0%;
+      }
+
+      @include media-queries.respond-to(media-queries.$phone){
+     
+        width: 100%;
+        display: flex;
+
+      }
 }
 
 

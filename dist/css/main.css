@@ -24,13 +24,25 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0rem;
   }
 }
 
-.col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .col-3 {
+    width: 57%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0%;
+            flex: 1 0 0%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .col-3 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 h1 {
@@ -66,8 +78,13 @@ h2 {
 }
 @media only screen and (max-width: 640px) {
   h2 {
-    font-size: 2rem;
-    margin-left: -5rem;
+    font-size: 1.8rem;
+    margin-left: -6rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  h2 {
+    margin-right: 6rem;
   }
 }
 
@@ -318,6 +335,13 @@ h3 {
   .center-icns {
     margin-left: 0;
   }
+}
+
+.text-fr-f {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .testimonial1 {
@@ -706,7 +730,7 @@ h3 {
   font-weight: 700;
   color: hsl(0deg, 0%, 100%);
   margin-top: 54px;
-  margin-bottom: 112px;
+  margin-bottom: 74px;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .signup-classic h2 {
