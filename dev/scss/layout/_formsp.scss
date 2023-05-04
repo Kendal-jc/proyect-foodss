@@ -1,31 +1,50 @@
 @use "./abstracts/variables";
 @use "../vendor/media-queries";
+@use "./base/typography";
 
-
-.img-p{
+.img-p {
   width: 65%;
   height: 78%;
   margin-left: 4rem;
 
-    
-    @include media-queries.respond-to(media-queries.$phone){
-     
-        margin-top: 2rem;
-        align-items: center;
-      }
-  
-      @include media-queries.respond-to(media-queries.$tablet-landscape){
-        width: 46%;
-        height: 27%;
-        margin-left: 6rem;
-        margin-top: 2rem;
-        }
+  @include media-queries.respond-to(media-queries.$phone) {
+    width: 215%;
+    height: 112%;
+    margin-left: 8rem;
+    margin-top: 2rem;
   }
 
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    width: 100%;
+    height: 70%;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+}
 
-.img-college{
-    width: 5%;
+.mt-btn {
+  margin-top: 0rem;
+  @include media-queries.respond-to(media-queries.$phone) {
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    margin-top: 1rem;
+  }
+}
+.img-college {
+  width: 5%;
+  height: 50%;
+  @include media-queries.respond-to(media-queries.$phone) {
+    width: 13%;
     height: 50%;
+  }
+
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    width: 8%;
+    height: 50%;
+  }
 }
 
 .form__group {
@@ -33,12 +52,25 @@
   padding: 20px 0 0;
   width: 100%;
   max-width: 180px;
-  margin-left: 4rem;
+  margin-left: 3rem;
+
+  @include media-queries.respond-to(media-queries.$phone) {
+    margin-left: 6rem;
+    width: 392%;
+    height: 70%;
+  }
+
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    width: 170%;
+    height: 70%;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
 }
 
 .form__field {
   font-family: inherit;
-  width: 100%;
+  width: 140%;
   border: none;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
@@ -88,15 +120,14 @@
 }
 
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 
-
-
 ///btn
 .custom-btn {
-  width: 223px;;
+  width: 223px;
   height: 40px;
   color: #fff;
   border-radius: 5px;
@@ -109,29 +140,42 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   margin-top: 2rem;
- }
- 
- .btn-1 {
+  margin-left: 2rem;
+
+  @include media-queries.respond-to(media-queries.$phone) {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    margin-left: 1rem;
+  }
+}
+
+.btn-1 {
   background: variables.$clr-orange;
-  background: linear-gradient(0deg, variables.$clr-orange 0%,variables.$clr-orange 100%);
+  background: linear-gradient(
+    0deg,
+    variables.$clr-orange 0%,
+    variables.$clr-orange 100%
+  );
   border: none;
- }
- 
- .btn-1:before {
+}
+
+.btn-1:before {
   height: 0%;
   width: 2px;
- }
- 
- .btn-1:hover {
-  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
-               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-     inset -4px -4px 6px 0 rgba(255,255,255,.2),
-     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
- }
- 
-/// 
+}
+
+.btn-1:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+///

@@ -227,7 +227,7 @@ h3{
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
        
-        margin-right: 0rem;
+        margin-right:-2rem;
       }
 }
 
@@ -263,6 +263,22 @@ h3{
         align-items: center;
       }
 }
+
+.text-form{
+    @include typography.set-font(variables.$fp, variables.$fw-bold-italic, variables.$f-form-btn,variables.$clr-dark);
+    text-align: center;
+  
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        font-size: 1.3rem;
+        
+      }
+  
+      @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 1.5rem;
+        
+      }
+  }
 //formsPerfil
 
 

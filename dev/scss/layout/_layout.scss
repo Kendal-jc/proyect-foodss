@@ -1,32 +1,35 @@
-@use '../vendor/media-queries';
+@use "../vendor/media-queries";
 
+.container {
+  display: grid;
 
-.container{
-    display: grid;
+  @include media-queries.respond-to(media-queries.$phone) {
+    display: block;
+  }
+
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    display: block;
+  }
 }
 
-.row{
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-queries.respond-to(media-queries.$phone) {
+    display: block;
+    justify-content: center;
+    margin: 0rem;
+  }
+}
+.col-3 {
+  @include media-queries.respond-to(media-queries.$tablet-landscape) {
+    width: 57%;
+    flex: 1 0 0%;
+  }
+
+  @include media-queries.respond-to(media-queries.$phone) {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-
-    @include media-queries.respond-to(media-queries.$phone){
-        display: block;
-        justify-content:center;
-        margin: 0rem;
-    }
+  }
 }
-.col-3{
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-      width: 57%;
-      flex: 1 0 0%;
-      }
-
-      @include media-queries.respond-to(media-queries.$phone){
-     
-        width: 100%;
-        display: flex;
-
-      }
-}
-
-

@@ -2,7 +2,7 @@
 @use '../base/typography';
 @use '../vendor/media-queries';
 .clr-footer {
-    height: 300px;
+   
     width: auto;
     margin-top: 20rem;
     padding-left: 3rem;
@@ -10,8 +10,19 @@
     background:variables.$clr-btn;
     z-index: 0;
     justify-content: space-between;
-    position: relative;
-   
+    
+    @include media-queries.respond-to(media-queries.$phone){
+     
+      height: none;
+      width: auto;
+      margin-top: 0rem;
+      padding-left: 0rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+      margin-left: 14rem;
+      margin-top: 5rem;
+    }
 }
 
 
