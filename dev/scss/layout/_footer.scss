@@ -27,7 +27,7 @@
 
 
 .img-center{
-    margin-left: 38rem;
+    margin-left: 42rem;
     margin-top: 5rem;
     
     @include media-queries.respond-to(media-queries.$phone){
@@ -43,7 +43,7 @@
 }
 
 .img-center-logo{
-    margin-left: 44.5rem;
+    margin-left: 49.5rem;
     margin-top: -3rem;
     @include media-queries.respond-to(media-queries.$phone){
      

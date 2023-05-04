@@ -45,12 +45,16 @@
      
         margin: 0;
         display: block;
-        margin-left: -12rem;
+        margin-left: -16rem;
+      }
+
+      @include media-queries.respond-to(media-queries.$tablet-landscape){
+      margin: 0rem;
       }
 }
 
 .btn-c{
-  margin-left: 12.5rem;
+  margin-left: 16rem;
   
 }
 

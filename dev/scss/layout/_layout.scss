@@ -33,3 +33,10 @@
     display: flex;
   }
 }
+
+.ml-d{
+ 
+  @include media-queries.respond-to(media-queries.$tablet-landscape){
+    margin-left: 3rem;
+  }
+}

@@ -24,6 +24,7 @@
 
 .mt-btn {
   margin-top: 0rem;
+  
   @include media-queries.respond-to(media-queries.$phone) {
     margin-top: 2rem;
     align-items: center;
@@ -63,7 +64,7 @@
   @include media-queries.respond-to(media-queries.$tablet-landscape) {
     width: 170%;
     height: 70%;
-    margin-left: 0rem;
+    margin-left:-3rem;;
     margin-top: 0rem;
   }
 }
@@ -148,11 +149,12 @@
 
   @include media-queries.respond-to(media-queries.$phone) {
     display: block;
-    margin-left: 1rem;
+    margin-left: 6.5rem;
+    width: 52%;
   }
 
   @include media-queries.respond-to(media-queries.$tablet-landscape) {
-    margin-left: 1rem;
+    margin-left:2rem;
   }
 }
 
