@@ -219,7 +219,7 @@ h3{
 //formsPerfil
 .text-f-pp{
     @include typography.set-font(variables.$fp, variables.$fw-bold-italic, variables.$f-form-t,variables.$clr-dark);
-    margin-right: 76rem;
+    margin-right: 69rem;
 
        @include media-queries.respond-to(media-queries.$phone){
      

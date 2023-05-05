@@ -96,7 +96,7 @@
 
 .signup {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -116,7 +116,7 @@
 
   @include media-queries.respond-to(media-queries.$phone) {
     display: inline-table;
-
+    top: 54%;
     width: 300px;
     height: 400px !important;
   }
@@ -141,7 +141,7 @@
 
 .signup-classic h2 {
   font-family: variables.$fp;
-  font-size: variables.$f-form-t;
+  font-size: variables.$f-form-t-i;
   font-weight: variables.$fw-bold-italic;
   color: variables.$clr-white;
   margin-top: 54px;
