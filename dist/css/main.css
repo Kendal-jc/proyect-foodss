@@ -6,6 +6,24 @@ body {
   color: hsl(0deg, 0%, 26%);
 }
 
+button {
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -27,6 +45,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media only screen and (max-width: 640px) {
   .row {

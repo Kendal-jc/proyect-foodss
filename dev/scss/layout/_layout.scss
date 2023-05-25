@@ -15,7 +15,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   @include media-queries.respond-to(media-queries.$phone) {
     display: block;
     justify-content: center;

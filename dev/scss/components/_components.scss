@@ -47,3 +47,23 @@
     text-align: center;
 }
 }
+
+
+button{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}
