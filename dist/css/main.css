@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
   background: hsl(0deg, 0%, 96%);
   margin: 0;
   padding: 0;
@@ -187,7 +188,7 @@ h3 {
 
 .card-inf {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.938rem;
   color: hsl(0deg, 0%, 13%);
 }
@@ -477,6 +478,214 @@ h3 {
   }
 }
 
+:root {
+  /* Dark Mode Colours */
+  --background: #0f0f0f;
+  --color: #f1f1f1;
+  --button: #272727;
+  --buttonhover: #3f3f3f;
+  --feedback__color: rgba(255, 255, 255, 0.7);
+  /* Light Mode Colours
+
+  background: #FFFFFF;
+  color: #000000;
+  button: #F2F2F2;
+  buttonhover: #E5E5E5;
+
+  */
+}
+
+.container-like {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.like_dislike {
+  position: relative;
+  width: 450px;
+  height: 115px;
+  font-size: 50px;
+  background-color: var(--button);
+  border-radius: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.like {
+  z-index: 1;
+  width: 60%;
+  border-radius: 200px 0 0 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.dislike {
+  z-index: 2;
+  width: 40%;
+  border-radius: 0 200px 200px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.like_dislike div:hover {
+  cursor: pointer;
+  background-color: var(--buttonhover);
+}
+
+.divider {
+  z-index: 0;
+  position: absolute;
+  left: 60%;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: var(--buttonhover);
+}
+
+@-webkit-keyframes buttonPress {
+  0% {
+    -webkit-box-shadow: inset 0px 0px 5px 2px var(--feedback__color);
+            box-shadow: inset 0px 0px 5px 2px var(--feedback__color);
+  }
+  100% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes buttonPress {
+  0% {
+    -webkit-box-shadow: inset 0px 0px 5px 2px var(--feedback__color);
+            box-shadow: inset 0px 0px 5px 2px var(--feedback__color);
+  }
+  100% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+.toggle-container {
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--button);
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  background-color: var(--background);
+}
+
+.toggle-dark {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.toggle-light {
+  -webkit-transform: translateX(95%);
+          transform: translateX(95%);
+}
+
+.touch_feedback {
+  -webkit-animation-name: buttonPress;
+          animation-name: buttonPress;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+}
+
+.like__animation {
+  -webkit-animation-name: like;
+          animation-name: like;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+}
+
+.dislike__animation {
+  -webkit-animation-name: dislike;
+          animation-name: dislike;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+}
+
+@-webkit-keyframes like {
+  20% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@keyframes like {
+  20% {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes dislike {
+  30% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@keyframes dislike {
+  30% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
 .testimonial1 {
   min-height: 100vh;
   margin: auto;

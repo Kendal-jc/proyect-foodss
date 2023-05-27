@@ -66,7 +66,7 @@ h3{
 }
 
 .card-inf{
-    @include typography.set-font(variables.$ff, variables.$fw-regular, variables.$f-card-time,variables.$clr-dark);
+    @include typography.set-font(variables.$ff, variables.$fw-medium, variables.$f-card-time,variables.$clr-dark);
     
 }
 .text-cinft{

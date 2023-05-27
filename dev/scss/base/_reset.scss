@@ -1,7 +1,7 @@
 @use './abstracts/variables';
 
 body{
-    font-family: variables.$ff;
+    font-family: variables.$ff !important;
     background: variables.$clr-body;
     margin: 0;
     padding: 0;

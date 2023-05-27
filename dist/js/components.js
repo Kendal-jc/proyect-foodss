@@ -24,7 +24,6 @@ const app = Vue.createApp({
             recipe: {},
             all_recipes: [],
             hasRecipes: true,
-
         }
     },
     mounted: function () {
@@ -54,7 +53,7 @@ const app = Vue.createApp({
         axios({
             method: 'get',
            // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
-           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=bf129f81faa344d88d153cf04b082923'
+           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=a1898358afc44508867c132adeb5ff0f'
         })
             .then(
                 (response) => {
@@ -124,7 +123,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=bf129f81faa344d88d153cf04b082923'
+                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
 
                 })
                     .then(
@@ -134,13 +133,14 @@ const app = Vue.createApp({
                            this.recipes[index].time=items.readyInMinutes+"mins";
                            this.recipes[index].level=items.servings;
                            this.recipes[index].description=items.summary;
+                           this.recipes[index].likes=items.aggregateLikes;
 
-                           if(this.level>=1){
+                           if(this.level>=1 && this.level<=2){
                                 this.level="Facíl";
-                           }else if(this.leve>=2){
-                            this.level="Intermedio";
-                           }else if(this.level>=6){
-                            this.level="Dificil";
+                           }else if(this.leve>=3  && this.level<=5){
+                                this.level="Intermedio";
+                           }else if(this.level>=6 && this.level<=7){
+                                 this.level="Dificil";
                            }
                            return this.level;
                         }
@@ -175,7 +175,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=bf129f81faa344d88d153cf04b082923'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
             })
                 .then(
                     (response) => {
@@ -189,7 +189,7 @@ const app = Vue.createApp({
                         this.recipe.category = item.dishTypes[0];
                         this.recipe.time = item.readyInMinutes + "mins";
                         this.recipe.level = "Easy";
-                        this.recipe.like = item.aggregateLikes;
+                        this.recipe.likes = item.aggregateLikes;
                         this.recipe.instructions = item.instructions;
 
                         let ingredientsList = "";
@@ -249,3 +249,4 @@ const emitter = new mitt();
 
 //global property for custom events
 app.config.globalProperties.$test = emitter;
+
