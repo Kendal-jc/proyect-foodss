@@ -36,6 +36,7 @@
      <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
+    <section  id="app">
     <section class="principal testimonial1">
 
         <header>
@@ -100,9 +101,12 @@
             </li>
         </ul>
       </nav>
-   
+      
+      <recipe-details :name="recipe.name" :image="recipe.image"
+      :instructions="recipe.instructions"
+      :time="recipe.time" :instructions="recipe.instructions"  :category="recipe.category"></recipe-details>
 
-  <div id="app"class="container margin-tp">
+  <div class="container margin-tp">
     <div class="mb-1">
         <div class="food-type-limit mt-1 header-limit">
             <h3 class="margin-t">Top 10 en recetas</h3>
@@ -112,9 +116,9 @@
     <section class="row">
         <section class="row">
             <div v-for="(item, index) in recipes" class="col-md-3">
-                <recipe-card :image="item.image" :category="item.category" :name="item.name"
-                    :description="item.instructions" :time="item.time" :level="item.level" :likes="item.likes"
-                    :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+                <recipe-card :image="item.image"  :name="item.name" :index="item.id"
+                    :description="item.description" :time="item.time" :level="item.level" :likes="item.likes"
+                     v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
                     v-on:recipedetails="onClickRecipeDetails">
                 </recipe-card>
             </div>
@@ -124,7 +128,7 @@
 
 </div>
 
-
+ </section>
      <!-- contact us -->
      <footer class="clr-footer mt-5 p-0 m-0">
         <div class="container-fluid">
@@ -152,7 +156,7 @@
 
             
     </footer>
-<script src="https://use.fontawesome.com/fe459689b4.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
    <!-- VueJS -->
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -162,7 +166,8 @@
 
    <!-- Axios - API recipes-->
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+   
+<script src="https://use.fontawesome.com/fe459689b4.js"></script>
 
    <!-- main script -->
    <script src="./js/components.js"></script>

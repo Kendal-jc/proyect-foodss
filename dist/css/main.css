@@ -82,6 +82,18 @@ button {
   }
 }
 
+.container-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  margin: 0rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 12rem;
+  margin-top: 2rem;
+}
+
 h1 {
   font-family: "Rubik Wet Paint", cursive;
   font-weight: 700;
@@ -230,11 +242,10 @@ h3 {
 }
 
 .imgs {
-  width: 70%;
+  width: 80%;
   image-rendering: auto;
   background-size: cover;
   position: relative;
-  left: 16.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,7 +253,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  height: 396px;
 }
 @media only screen and (max-width: 640px) {
   .imgs {
@@ -265,6 +275,7 @@ h3 {
   font-weight: 400;
   font-size: 1rem;
   color: hsl(0deg, 0%, 26%);
+  margin-left: -0.7rem;
 }
 
 .text-t-d {
@@ -329,8 +340,9 @@ h3 {
 }
 
 .img-iconss {
-  width: 7%;
+  width: 10%;
   display: inline-block;
+  margin: -2;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .img-iconss {
@@ -348,7 +360,7 @@ h3 {
 }
 
 .m-r-img {
-  margin: -19rem;
+  margin: -23rem;
 }
 @media only screen and (max-width: 640px) {
   .m-r-img {
@@ -357,7 +369,7 @@ h3 {
 }
 
 .me-d {
-  width: 70%;
+  width: 99%;
 }
 
 .center-icns {

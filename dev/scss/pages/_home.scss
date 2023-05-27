@@ -71,6 +71,7 @@ h3{
 }
 .text-cinft{
     @include typography.set-font(variables.$ff, variables.$fw-medium, variables.$f-inf,variables.$clr-dark);
+    
 
 }
 .btn-list{
@@ -93,7 +94,7 @@ h3{
 }
 
 .imgs{
-    @include mixins.imgg(70%);
+    @include mixins.imgg(80%);
 
     @include media-queries.respond-to(media-queries.$phone){
      
@@ -114,6 +115,7 @@ h3{
 
 .text-id{
     @include typography.set-font(variables.$fp, variables.$fw-regular,variables.$f-d,variables.$clr-btn);
+    margin-left: -0.7rem;
 }
 
 .text-t-d{
@@ -162,8 +164,9 @@ h3{
     margin-top: 13rem;
 }
 .img-iconss{
-    width: 7%;
+    width: 10%;
     display: inline-block;
+    margin:-2;
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
         margin: -3rem;
@@ -180,7 +183,7 @@ h3{
 
 
 .m-r-img{
-    margin: -19rem;
+    margin: -23rem;
     @include media-queries.respond-to(media-queries.$phone){
      
        margin: 0rem;
@@ -188,7 +191,7 @@ h3{
 }
 
 .me-d{
-   width: 70%;
+   width: 99%;
 }
 
 .center-icns{

@@ -11,10 +11,8 @@
     image-rendering: auto;
     background-size: cover;
     position: relative;
-    left: 16.5%;
     display: flex;
     flex-flow: row;
-    height: 396px;
   }
 
   @mixin text-img($fweight, $fsize, $fcolor,$ff){
