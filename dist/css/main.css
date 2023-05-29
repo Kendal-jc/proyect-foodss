@@ -320,6 +320,11 @@ h3 {
   top: 19%;
   left: 3%;
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .inf {
+    left: -16% !important;
+  }
+}
 
 .inf-left {
   top: 1%;
@@ -875,7 +880,7 @@ h3 {
 }
 @media only screen and (max-width: 640px) {
   .img-center-logo {
-    margin-left: 9.1rem;
+    margin-left: 9rem;
     margin-top: 2rem;
   }
 }

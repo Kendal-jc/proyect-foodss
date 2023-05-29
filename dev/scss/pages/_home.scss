@@ -140,6 +140,10 @@ h3{
     position: relative;
     top: 19%;
     left: 3%;
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+       left: -16% !important;
+      }
+
 }
 
 .inf-left {
