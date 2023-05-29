@@ -70,9 +70,7 @@ h3{
     
 }
 .text-cinft{
-    @include typography.set-font(variables.$ff, variables.$fw-medium, variables.$f-inf,variables.$clr-dark);
-    
-
+    @include typography.set-font(variables.$ff, variables.$fw-bold, variables.$f-inf,variables.$clr-dark);
 }
 .btn-list{
     @include components.btn(variables.$clr-btn);

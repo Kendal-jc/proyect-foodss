@@ -53,7 +53,7 @@ const app = Vue.createApp({
         axios({
             method: 'get',
            // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
-           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=a1898358afc44508867c132adeb5ff0f'
+           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=0ae7b82844774b23a98885ff21b0d19c'
         })
             .then(
                 (response) => {
@@ -123,7 +123,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
+                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=74d1509eb48e4a6f81917332fc6f017a'
 
                 })
                     .then(
@@ -175,7 +175,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=0ae7b82844774b23a98885ff21b0d19c'
             })
                 .then(
                     (response) => {
@@ -188,7 +188,7 @@ const app = Vue.createApp({
                         this.recipe.name = item.title;
                         this.recipe.category = item.dishTypes[0];
                         this.recipe.time = item.readyInMinutes + "mins";
-                        this.recipe.level = "Easy";
+                        this.recipe.level = item.time;
                         this.recipe.likes = item.aggregateLikes;
                         this.recipe.instructions = item.instructions;
 
@@ -227,14 +227,9 @@ const app = Vue.createApp({
                                     id: element.id,
                                     image: element.image,
                                     name: element.title,
-                                    category:category,
-                                    time: "20 mins",
-                                    level: "Easy",
-                                    likes: 18,
-                                    ingredients: "NA",
-                                    instructions: "NA"
                                 })
                             })
+                            this.recipedetai();
                         }
                     )
                     .catch(

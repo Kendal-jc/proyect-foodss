@@ -20,7 +20,8 @@ app.component('recipe-card',{
             default: "default time"
         },
         level:{
-            type: Number
+            type: Number,
+            default:"0"
            
         },
         likes:{
@@ -59,7 +60,7 @@ app.component('recipe-card',{
                 <div class="card-body">
                     <p class="card-title pointer text-decoration-none text-center d-block name-card text-truncate">{{name}}</p>
                     <div>
-                        <p class="text-cinft d-block text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et. </p>
+                        <p class="text-cinft d-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et. </p>
                     </div>
                         <p class="text-cinft text-center">{{ likes }}</p>
                     <div class="d-flex justify-content-center">

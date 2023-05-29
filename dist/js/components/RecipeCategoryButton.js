@@ -14,5 +14,9 @@ app.component('recipe-category-button',{
 
     template:
     /*html*/ 
-    `<button class='btn btn-dark' v-on:click="onClickCategoryButton" >{{ name }}</button>`
+    `
+            <li><a class="dropdown-item" v-on:click="onClickCategoryButton">{{name}}</a></li>
+              
+    `
 })
+

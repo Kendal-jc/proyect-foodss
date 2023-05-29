@@ -86,25 +86,34 @@
         <ul class="nav mt-2  mb-md-1 m-btn">
 
             <li class="d-inline-flex">
-                <a class="btn-list " href="category.php">Todas</a>
+                <a class="btn-list " href="index.html">Todas</a>
             </li>
   
-            <li class="d-inline-flex">
-                <a class="btn-list " href="occasions.php">Categorias</a>
+            <li class="nav-item dropdown d-inline-flex">
+              <a class="nav-link dropdown-toggle btn-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <ul v-for="(category, index) in categories">
+                  <recipe-category-button :name="category.name"
+                      v-on:selectedcategory="onClickSelectedCategory"></recipe-category-button>
+               </ul>
+              </ul>
             </li>
+           
             <li class="d-inline-flex">
-                <a class="btn-list" href="level.php">Ocasiones</a>
+                <a class="btn-list" href="#">Ocasiones</a>
             </li>
 
             <li class="d-inline-flex">
-                <a class="btn-list" href="todas.php">Dificultad</a>
+                <a class="btn-list" href="#">Dificultad</a>
             </li>
         </ul>
       </nav>
       
       <recipe-details :name="recipe.name" :image="recipe.image"
       :instructions="recipe.instructions"
-      :time="recipe.time" :instructions="recipe.instructions"  :category="recipe.category"></recipe-details>
+      :time="recipe.time" :instructions="recipe.instructions" :category="recipe.category"></recipe-details>
 
   <div class="container margin-tp">
     <div class="mb-1">
@@ -129,6 +138,7 @@
 </div>
 
  </section>
+ 
      <!-- contact us -->
      <footer class="clr-footer mt-5 p-0 m-0">
         <div class="container-fluid">
