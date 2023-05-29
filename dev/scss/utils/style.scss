@@ -1,0 +1,10 @@
+@use "../vendor/media-queries";
+
+.modal-1{
+    @include media-queries.respond-to(media-queries.$phone){
+     
+        width: 100% !important;
+        
+
+      }
+}

@@ -94,6 +94,12 @@ button {
   margin-left: 12rem;
   margin-top: 2rem;
 }
+@media only screen and (max-width: 640px) {
+  .container-modal {
+    margin-left: 11rem;
+    width: 100%;
+  }
+}
 
 h1 {
   font-family: "Rubik Wet Paint", cursive;
@@ -257,8 +263,8 @@ h3 {
 }
 @media only screen and (max-width: 640px) {
   .imgs {
-    width: 60%;
-    left: 18%;
+    width: 84%;
+    left: 0%;
     height: 254px;
   }
 }
@@ -307,7 +313,7 @@ h3 {
 }
 
 .mrr {
-  margin-right: 5rem;
+  margin-right: 0rem;
 }
 @media only screen and (max-width: 640px) {
   .mrr {
@@ -691,6 +697,12 @@ h3 {
             transform: translateY(-15px);
   }
 }
+@media only screen and (max-width: 640px) {
+  .modal-1 {
+    width: 100% !important;
+  }
+}
+
 .testimonial1 {
   min-height: 100vh;
   margin: auto;

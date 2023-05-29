@@ -13,6 +13,9 @@ app.component("recipe-details", {
       type: String,
     },
     time: {
+      type: String,
+    },
+    likes: {
       type: Number,
     },
   },
@@ -36,7 +39,7 @@ app.component("recipe-details", {
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content" style="width:150%">
+    <div class="modal-content modal-1" style="width:150%">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -69,11 +72,14 @@ app.component("recipe-details", {
                  </ul>
           </section>
       
-          <div class="mrr">
+          <div class="mrr mt-3">
             <div class="text-center mb-5">
-              <button class='btn-like mt-3'>
-                  Like
-              </button>
+            <p class="text-cinft text-center">{{ likes }}</p>
+            <div class="d-flex justify-content-center">
+                    
+                 <button class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true" v-on:click="onClickLike()"></i></button>
+                 <button class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true" v-on:click="onClickUnlike()"></i></button>
+           </div>
             </div>
           </div>
       
@@ -83,7 +89,7 @@ app.component("recipe-details", {
               <div class="col ms-xxl-5">
                   <p class="text-t-d">Ingredientes</p>
                   <ol class="text-id">
-                      <li>{{instructions}}</li>
+                      <li>{{ingredients}}</li>
                   </ol>
               </div>
       
@@ -91,26 +97,9 @@ app.component("recipe-details", {
                   <p class="text-t-d">Preparación de la Receta</p>
                   <ol class="text-id">
                       <li>
-                          Retirarles a la galletas la crema y reservar por separado tanto la crema con las galletas sin relleno.
+                          {{instructions}}
                       </li>
-                      <li>
-                          Procesar las galletas, reservar ¼ de taza y colocar el resto en un molde desmontable.
-                         </li>
-                      <li>
-                          Añadir al molde mantequilla derretida y mezclar con los dedos. Compactar para forra la base del molde. Llevar al congelador por 30 minutos.
-                      </li>
-                      <li>
-                          Hidratar la gelatina en al agua y luego de 5 minutos fundir a baño maría.
-                      </li>
-                      <li>
-                          En un bol mezclar con batidora de mano queso crema, el relleno de las galletitas, azúcar, jugo de limón, esencia de vainilla y sin dejar de batir añadir crema de leche.
-                      </li>
-                      <li>
-                          Incorporar la gelatina fundida y seguir batiendo hasta integrar todo.
-                      </li>
-                      <li>
-                          Verter este relleno sobre el molde con la base fría y llevar al frío hasta que tome consistencia, aproximadamente 120 minutos.
-                      </li>
+                     
                   
                   </ol>
               </div>

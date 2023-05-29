@@ -91,8 +91,9 @@
   
             <li class="nav-item dropdown d-inline-flex">
               <a class="nav-link dropdown-toggle btn-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Categorias
               </a>
+              <!--
               <ul class="dropdown-menu">
                 <ul v-for="(category, index) in categories">
                   <recipe-category-button :name="category.name"
@@ -100,7 +101,7 @@
                </ul>
               </ul>
             </li>
-           
+          -->
             <li class="d-inline-flex">
                 <a class="btn-list" href="#">Ocasiones</a>
             </li>
@@ -112,8 +113,8 @@
       </nav>
       
       <recipe-details :name="recipe.name" :image="recipe.image"
-      :instructions="recipe.instructions"
-      :time="recipe.time" :instructions="recipe.instructions" :category="recipe.category"></recipe-details>
+         :likes="recipe.likes"
+      :time="recipe.time" :instructions="recipe.instructions" :ingredients="recipe.ingredients"></recipe-details>
 
   <div class="container margin-tp">
     <div class="mb-1">

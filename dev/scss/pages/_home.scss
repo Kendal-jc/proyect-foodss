@@ -96,8 +96,8 @@ h3{
 
     @include media-queries.respond-to(media-queries.$phone){
      
-        width: 60%;
-        left: 18%;
+        width: 84%;
+        left: 0%;
         height: 254px;
 
       }
@@ -128,7 +128,7 @@ h3{
     color: variables.$clr-orange;
 }
 .mrr{
-    @include mixins.mr-all(5rem);
+    @include mixins.mr-all(0rem);
     @include media-queries.respond-to(media-queries.$phone){
      
         margin-right: 0;

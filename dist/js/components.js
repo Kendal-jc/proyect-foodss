@@ -53,7 +53,7 @@ const app = Vue.createApp({
         axios({
             method: 'get',
            // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
-           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=a1898358afc44508867c132adeb5ff0f'
+           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=533a1fdf875644e49b9c7e07fe64295b'
         })
             .then(
                 (response) => {
@@ -123,7 +123,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
+                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=533a1fdf875644e49b9c7e07fe64295b'
 
                 })
                     .then(
@@ -135,14 +135,14 @@ const app = Vue.createApp({
                            this.recipes[index].description=items.summary;
                            this.recipes[index].likes=items.aggregateLikes;
 
-                           if(this.level>=1 && this.level<=2){
-                                this.level="Facíl";
-                           }else if(this.leve>=3  && this.level<=5){
-                                this.level="Intermedio";
-                           }else if(this.level>=6 && this.level<=7){
-                                 this.level="Dificil";
+                           if(this.recipes[index].level>=1 && this.recipes[index].level<=2){
+                            this.recipes[index].level="Easy";
+                           }else if(this.recipes[index].level>=3  && this.recipes[index].level<=5){
+                            this.recipes[index].level="Intermediate";
+                           }else if(this.recipes[index].level>=6 && this.recipes[index].level<=8){
+                            this.recipes[index].level="Difficult";
                            }
-                           return this.level;
+                           return this.recipes[index].level;
                         }
                     )
                     .catch(
@@ -175,7 +175,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=a1898358afc44508867c132adeb5ff0f'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=533a1fdf875644e49b9c7e07fe64295b'
             })
                 .then(
                     (response) => {
@@ -190,14 +190,15 @@ const app = Vue.createApp({
                         this.recipe.time = item.readyInMinutes + "mins";
                         this.recipe.level = item.servings;
                         this.recipe.likes = item.aggregateLikes;
+                        this.recipe.ingredients = item.summary;
                         this.recipe.instructions = item.instructions;
 
-                        let ingredientsList = "";
+                        let instructionsList = "";
                         for(let i = 0; i < item.extendedIngredients.length; i++){
-                            ingredientsList += item.extendedIngredients[i].original + "\n";
+                            instructionsList += item.extendedIngredients[i].original + "\n";
                         }
 
-                        this.recipe.ingredients = ingredientsList;
+                        this.recipe.instructions = instructionsList;
                         
                     }
                 )
@@ -209,7 +210,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=a1898358afc44508867c132adeb5ff0f' 
+                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=6e4c66576c5b47b392d9d1a090ccd33c' 
                 })
                     .then(
                         (response) => {

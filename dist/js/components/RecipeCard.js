@@ -20,8 +20,8 @@ app.component('recipe-card',{
             default: "default time"
         },
         level:{
-            type: Number,
-            default:"0"
+            type: String,
+            default:""
            
         },
         likes:{
@@ -71,7 +71,7 @@ app.component('recipe-card',{
                    
                     <div class="row d-flex justify-space-around mt-3">
                         <div class="col-7 inf card-inf text-truncate">{{time}}</div>
-                        <div class="col-5  inf-left card-inf d-flex justify-content-end pe-5">Level:{{level}}</div>
+                        <div class="col-5  inf-left card-inf d-flex justify-content-end pe-5">{{level}}</div>
                     </div>
                 </div>
             </div>
