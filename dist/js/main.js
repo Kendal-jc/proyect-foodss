@@ -42,18 +42,6 @@ methods: {
     },
     onClickViewRecipe(index){
         this.selectedIndex = index;
-    },
-    onClickPrev(){
-        this.selectedIndex--;
-        if(this.selectedIndex < 0){
-            this.selectedIndex = this.recipes.length-1;
-        }
-    },
-    onClickNext(){
-        this.selectedIndex++;
-        if(this.selectedIndex >= this.recipes.length){
-            this.selectedIndex = 0;
-        }
     }
 },
 });

@@ -18,6 +18,10 @@ app.component("recipe-details", {
     likes: {
       type: Number,
     },
+    level: {
+      type: String,
+    },
+
   },
   mounted() {
     this.$test.on("foo", function (data) {
@@ -67,7 +71,7 @@ app.component("recipe-details", {
                  </li>
                  <li class="nav-item">
                   <img class=" img-iconss" src="./imgs/level.png" alt="image">
-                 <p class="nav-link nav-text text-id">Facil</p>
+                 <p class="nav-link nav-text text-id">{{level}}</p>
              </li>
                  </ul>
           </section>
@@ -99,8 +103,6 @@ app.component("recipe-details", {
                       <li>
                           {{instructions}}
                       </li>
-                     
-                  
                   </ol>
               </div>
       

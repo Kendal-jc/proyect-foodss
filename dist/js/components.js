@@ -222,13 +222,22 @@ const app = Vue.createApp({
                         this.recipe.ingredients = item.summary;
                         this.recipe.instructions = item.instructions;
 
+                        
                         let instructionsList = "";
                         for(let i = 0; i < item.extendedIngredients.length; i++){
                             instructionsList += item.extendedIngredients[i].original + "\n";
                         }
 
                         this.recipe.instructions = instructionsList;
-                        
+
+                        if(this.recipe.level>=1 && this.recipe.level<=2){
+                            this.recipe.level="Easy";
+                           }else if(this.recipe.level>=3  && this.recipe.level<=5){
+                            this.recipes[index].level="Intermediate";
+                           }else if(this.recipe.level>=6 && this.recipe.level<=8){
+                            this.recipe.level="Difficult";
+                           }
+                           return this.recipe.level;
                     }
                 )
                 .catch(
