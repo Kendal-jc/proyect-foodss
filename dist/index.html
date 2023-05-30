@@ -93,7 +93,6 @@
               <a class="nav-link dropdown-toggle btn-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorias
               </a>
-              <!--
               <ul class="dropdown-menu">
                 <ul v-for="(category, index) in categories">
                   <recipe-category-button :name="category.name"
@@ -101,7 +100,6 @@
                </ul>
               </ul>
             </li>
-          -->
             <li class="d-inline-flex">
                 <a class="btn-list" href="#">Ocasiones</a>
             </li>
@@ -128,7 +126,7 @@
             <div v-for="(item, index) in recipes" class="col-md-3">
                 <recipe-card :image="item.image"  :name="item.name" :index="item.id"
                     :description="item.description" :time="item.time" :level="item.level" :likes="item.likes"
-                     v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+                     v-on:recipelikes="onClickRecipelike" v-on:recipeunlikes="onClickRecipeUnlike"
                     v-on:recipedetails="onClickRecipeDetails">
                 </recipe-card>
             </div>
@@ -146,7 +144,7 @@
       <div v-for="(item, index) in top_recipes" class="col-md-3">
           <recipe-card :image="item.image"  :name="item.name" :index="item.id"
               :description="item.description" :time="item.time" :level="item.level" :likes="item.likes"
-               v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+               v-on:recipelikes="onClickRecipelike" v-on:recipeunlikes="onClickRecipeUnlike"
               v-on:recipedetails="onClickRecipeDetails">
           </recipe-card>
       </div>

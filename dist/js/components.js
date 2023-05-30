@@ -54,7 +54,7 @@ const app = Vue.createApp({
         axios({
             method: 'get',
            // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
-           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=533a1fdf875644e49b9c7e07fe64295b'
+           url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=0ae7b82844774b23a98885ff21b0d19c'
         })
             .then(
                 (response) => {
@@ -118,7 +118,7 @@ const app = Vue.createApp({
             axios({
                 method: 'get',
                // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
-               url:'https://api.spoonacular.com/recipes/complexSearch?&sort=popularity&number=5&apiKey=533a1fdf875644e49b9c7e07fe64295b'
+               url:'https://api.spoonacular.com/recipes/complexSearch?&sort=popularity&number=5&apiKey=0ae7b82844774b23a98885ff21b0d19c'
             })
                 .then(
                     (response) => {
@@ -152,7 +152,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=533a1fdf875644e49b9c7e07fe64295b'
+                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[index].id+'/information?includeNutrition=false&apiKey=0ae7b82844774b23a98885ff21b0d19c'
 
                 })
                     .then(
@@ -179,23 +179,11 @@ const app = Vue.createApp({
                     );
             }
         },
-        onClickRecipeLike(index) {
-            this.recipes[index].likes += 1;
+        onClickRecipelike(index) {
+            this.recipes[index].likes+= 1;
         },
         onClickRecipeUnlike(index) {
             if (this.recipes[index].likes > 0) this.recipes[index].likes -= 1;
-        },
-        onClickPrev() {
-            this.selectedIndex--;
-            if (this.selectedIndex < 0) {
-                this.selectedIndex = this.recipes.length - 1;
-            }
-        },
-        onClickNext() { 
-            this.selectedIndex++;
-            if (this.selectedIndex >= this.recipes.length) {
-                this.selectedIndex = 0;
-            }
         },
         onClickRecipeDetails(index) {
             //this.selectedIndex = index;
@@ -204,7 +192,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=533a1fdf875644e49b9c7e07fe64295b'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=0ae7b82844774b23a98885ff21b0d19c'
             })
                 .then(
                     (response) => {
@@ -248,7 +236,7 @@ const app = Vue.createApp({
 
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=6e4c66576c5b47b392d9d1a090ccd33c' 
+                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=0ae7b82844774b23a98885ff21b0d19c' 
                 })
                     .then(
                         (response) => {

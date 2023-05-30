@@ -81,8 +81,8 @@ app.component("recipe-details", {
             <p class="text-cinft text-center">{{ likes }}</p>
             <div class="d-flex justify-content-center">
                     
-                 <button class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true" v-on:click="onClickLike()"></i></button>
-                 <button class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true" v-on:click="onClickUnlike()"></i></button>
+                 <button class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true" v-on:click="onClicklikes()"></i></button>
+                 <button class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true" v-on:click="onClickUnlikes()"></i></button>
            </div>
             </div>
           </div>
