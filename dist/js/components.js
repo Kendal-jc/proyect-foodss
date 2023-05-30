@@ -5,6 +5,7 @@ const app = Vue.createApp({
             selectedIndex: 0,
             recipes: [
             ],
+            top_recipes:[],
             categories: [
                 { name: 'main course' },
                 { name: 'side dish' },
@@ -114,7 +115,35 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );*/
-
+            axios({
+                method: 'get',
+               // url:'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=4a795667898e4967b51ab2e5dbc88e4e'
+               url:'https://api.spoonacular.com/recipes/complexSearch?&sort=popularity&number=5&apiKey=533a1fdf875644e49b9c7e07fe64295b'
+            })
+                .then(
+                    (response) => {
+    
+                        let items = response.data.results;
+                        console.log(items);
+    
+    
+                        this.top_recipes = [];
+    
+                        if (items.length > 0) this.loading = false;
+    
+                        items.forEach(element => {
+                            this.top_recipes.push({
+                                id: element.id,
+                                image: element.image,
+                                name: element.title
+                            })
+                        });
+                        this.recipedetai();
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                );
     },
     methods: {
         recipedetai(){

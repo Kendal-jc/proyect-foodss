@@ -8,11 +8,13 @@ const app = Vue.createApp({
             selectedIndex:0,
             hasRecipes: true,
             recipes: [
-            ]
+            ],
+            top_recipes:[],
         }
     },
 mounted:function(){
     this.all_recipes = this.recipes;
+    this.all_recipes = this.top_recipes;
 },
 
 methods: {
